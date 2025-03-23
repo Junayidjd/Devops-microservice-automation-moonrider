@@ -1,11 +1,33 @@
 spring:
- datasource:
-   username: root
-   password: password
-   url: jdbc:mysql://localhost:3306/javatechie
-   driver-class-name: com.mysql.cj.jdbc.Driver
- jpa:
-   show-sql: true
-   hibernate:
-     ddl-auto: update
-   properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/javatechie
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+
+
+
+
+
+
+
+
+
+# spring:
+#   datasource:
+#     username: root
+#     password: root  # MySQL root password
+#     url: jdbc:mysql://mysql-container:3306/javatechie  # Use mysql-container instead of localhost
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+#   spring:
+#   jpa:
+#     properties:
+#       hibernate:
+#         dialect: org.hibernate.dialect.MySQLDialect
+# server:
+#   port: 9191
