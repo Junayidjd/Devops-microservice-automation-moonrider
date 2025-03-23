@@ -114,6 +114,11 @@ public class ProductController {
         return service.getProductByName(name);
     }
 
+    @GetMapping("/products/search")
+    public List<Product> searchProducts(@RequestParam String keyword) {
+        return service.searchProducts(keyword);
+    }
+
     @PutMapping("/update")
     public Product updateProduct(@RequestBody Product product) {
         return service.updateProduct(product);
