@@ -17,7 +17,7 @@ services:
       retries: 10
 
   app:
-    image: junaiyd/spring-boot-crud-app
+    image: junaiyd/spring-boot-crud-app-v2.0
     container_name: spring-boot-app
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-container:3306/javatechie
