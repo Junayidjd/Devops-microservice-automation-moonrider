@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>Spring Boot CRUD Example</title>
@@ -14,5 +14,80 @@
       <li>PUT /update</li>
       <li>DELETE /delete/{id}</li>
     </ul>
+  </body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spring Boot CRUD Example - v2.0</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      .endpoint {
+        margin-bottom: 20px;
+      }
+      .endpoint h2 {
+        color: #555;
+      }
+      .endpoint p {
+        color: #777;
+      }
+      .endpoint pre {
+        background: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Spring Boot CRUD Example - v2.0</h1>
+    <p>This version includes enhanced search functionality with query parameters and error handling.</p>
+
+    <div class="endpoint">
+      <h2>Search Products</h2>
+      <p>Search products by name, price, or quantity using query parameters.</p>
+      <pre>
+GET /products/search?name=example&price=10.0&quantity=5
+      </pre>
+      <p><strong>Example:</strong></p>
+      <pre>
+<a href="http://localhost:9191/products/search?name=example">http://localhost:9191/products/search?name=example</a>
+<a href="http://localhost:9191/products/search?price=10.0">http://localhost:9191/products/search?price=10.0</a>
+<a href="http://localhost:9191/products/search?quantity=5">http://localhost:9191/products/search?quantity=5</a>
+<a href="http://localhost:9191/products/search?name=example&price=10.0&quantity=5">http://localhost:9191/products/search?name=example&price=10.0&quantity=5</a>
+      </pre>
+    </div>
+
+    <div class="endpoint">
+      <h2>Error Handling</h2>
+      <p>If no products are found, a <code>404 Not Found</code> response is returned.</p>
+      <p>If an internal server error occurs, a <code>500 Internal Server Error</code> response is returned.</p>
+    </div>
   </body>
 </html>
