@@ -17,15 +17,12 @@ services:
       retries: 10
 
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: junaiyd/spring-boot-crud-app-v2.0
+    image: spring-boot-app-v2.0  # Local image name
     container_name: spring-boot-app
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-container:3306/javatechie
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      SPRING_DATASOURCE_PASSWORD: root
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_SHOW_SQL: true
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQLDialect
